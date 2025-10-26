@@ -1,13 +1,20 @@
-# Este es el contenido de: utilidades\mensajes.py
+def mensaje_bienvenida():
+    print("===================================")
+    print(" ¡Bienvenido al Proyecto Colaborativo en Python! ")
+    print(" Este programa fue desarrollado por el equipo B ")
+    print(" de Programación III - Universidad Interamericana de Panamá ")
+    print("===================================\n")
 
-def saludo_bienvenida(nombre):
-    """Devuelve un saludo de bienvenida formateado."""
-    return f"¡Hola, {nombre}! Bienvenido al proyecto colaborativo."
 
-def saludo_despedida(nombre):
-    """Devuelve un saludo de despedida formateado."""
-    return f"¡Hasta luego, {nombre}! Gracias por contribuir."
+def mostrar_menu():
+    print("=== MENÚ PRINCIPAL ===")
+    print("1. Ver Historia")
+    print("2. Calcular Suma")
+    print("3. Calcular Resta")
+    print("4. Calcular Multiplicacion")
+    print("5. Calcular Division")
+    print("4. Salir\n")
 
-def nota_recordatorio(nombre):   
-    """Devuelve un mensaje genérico."""
-    return f" Como les va en el trabajo {nombre}?"
+
+def despedida():
+    print("\nMuchas gracias por usar nuestro programa. ¡Hasta pronto!\n")
