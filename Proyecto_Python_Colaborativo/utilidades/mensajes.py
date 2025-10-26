@@ -7,3 +7,7 @@ def saludo_bienvenida(nombre):
 def saludo_despedida(nombre):
     """Devuelve un saludo de despedida formateado."""
     return f"¡Hasta luego, {nombre}! Gracias por contribuir."
+
+def nota_recordatorio(nombre):   
+    """Devuelve un mensaje genérico."""
+    return f" Como les va en el trabajo {nombre}?"
