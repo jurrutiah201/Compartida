@@ -8,3 +8,5 @@ def imprimir_cuento_base():
     print("Esos aliados le enseñaron sobre la importancia de la colaboración y el trabajo en equipo.") 
     print("en uno de sus obstáculos, el bit tuvo que aprender a dividir sus recursos para avanzar.") 
     print("Y al avanzar, descubrió que sumar fuerzas con otros bits hacía el viaje más fácil.")
+    print("Asi, el bit y sus aliados, sigueron su travesia enfrentando nuevos retos.")
+    print("Muchos otros bits se aliaron, algunos llegaron a su destino antes que el,")
