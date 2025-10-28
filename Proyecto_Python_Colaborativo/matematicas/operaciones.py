@@ -15,3 +15,7 @@ def multiplicar(a, b):
 def dividir(a, b):
     """Divide dos números. Lanza un error si el divisor es cero."""
     return a / b
+
+def potencia(a, b):
+    """Eleva un numero a a una potencia b. Lanza un error si el divisor es cero."""
+    return a ** b
