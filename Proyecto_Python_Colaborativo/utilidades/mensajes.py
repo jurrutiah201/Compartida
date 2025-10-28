@@ -13,6 +13,7 @@ def mostrar_menu():
     print("3. Calcular Resta")
     print("4. Calcular Multiplicacion")
     print("5. Calcular Division")
+    print("6. Calcular a elevado a la b")
     print("4. Salir\n")
 
 

@@ -1,7 +1,7 @@
 # main.py
 
 # Importamos las funciones específicas de nuestros módulos
-from matematicas.operaciones import sumar, multiplicar
+from matematicas.operaciones import sumar, multiplicar, potencia
 from cuentos.historia import imprimir_cuento_base
 from utilidades.mensajes import saludo_bienvenida, nota_recordatorio
 
@@ -13,6 +13,9 @@ print(f"\nResultado de la suma: {resultado_suma}")
 
 resultado_multiplicacion = multiplicar(10, 10)
 print(f"Resultado de la multiplicación: {resultado_multiplicacion}")
+
+resultado_potencia = potencia(2, 3)
+print(f"Resultado de 2 elevado a la 3: {resultado_potencia}")
 
 # Usamos la función del módulo de cuentos
 print("\nIniciando la impresión del cuento:")
