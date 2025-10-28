@@ -17,4 +17,6 @@ print(f"\nDespués de reflexionar, {nombre} se dio cuenta de cuánto había crec
 print(f"A sus {edad} años, su trabajo como {trabajo} le enseñaba a ser constante y agradecido.")
 print(f"Además de estudiar {estudio}, soñaba con conocer {pais} y descubrir nuevas oportunidades.")
 print(f"Con determinación, {nombre} decidió seguir aprendiendo cada día para alcanzar sus metas.")
+print(f"Sabía que su enfoque en {estudio} sería la clave de su futuro profesional.")
+print(f"Y tal vez, solo tal vez, su próximo gran viaje realmente sería a {pais}.")
 print("Así, la historia de esfuerzo, sueños y aprendizaje continuó, marcando el inicio de una nueva etapa en su vida.")
