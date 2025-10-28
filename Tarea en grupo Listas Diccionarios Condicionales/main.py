@@ -15,6 +15,7 @@ edades = {
 
 # Solicitar nombre al usuario
 # Agregamos .capitalize() para estandarizar la entrada y evitar problemas con mayúsculas/minúsculas
+print("Hola, bienvenido al sistema de registro de edades.")
 nombre_usuario = input("Ingresa un nombre: ").capitalize()
 
 # Verificar si el nombre existe en el diccionario
