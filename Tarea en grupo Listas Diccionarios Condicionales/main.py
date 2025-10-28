@@ -8,7 +8,7 @@ nombres = ["Ana", "Carlos", "Lucía", "Miguel", "Rances"]
 edades = {
     "Michael": 30,
     "Jose": 25,
-    "David": 28,
+    "David": 31,
     "Alexis": 35,
     "Rances": 23
 }
