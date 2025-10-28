@@ -13,3 +13,8 @@ print(f"Además, estudio {estudio} para mejorar mis habilidades y conocimientos,
 print("me encanta aprender cosas nuevas y enfrentar nuevos desafíos cada día.")
 print("Mi sueño es poder viajar por todo el mundo y conocer nuevas culturas,")
 print(f"aunque si pudiera escoger ya mismo, iria a {pais}")
+print(f"\nDespués de reflexionar, {nombre} se dio cuenta de cuánto había crecido viviendo en {ciudad}.")
+print(f"A sus {edad} años, su trabajo como {trabajo} le enseñaba a ser constante y agradecido.")
+print(f"Además de estudiar {estudio}, soñaba con conocer {pais} y descubrir nuevas oportunidades.")
+print(f"Con determinación, {nombre} decidió seguir aprendiendo cada día para alcanzar sus metas.")
+print("Así, la historia de esfuerzo, sueños y aprendizaje continuó, marcando el inicio de una nueva etapa en su vida.")
