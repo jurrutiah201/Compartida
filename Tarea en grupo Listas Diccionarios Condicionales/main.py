@@ -6,7 +6,7 @@ nombres = ["Ana", "Carlos", "Lucía", "Miguel", "Rances"]
 
 # Diccionario con las edades
 edades = {
-    "Michael": 30,
+    "Michael": 25,
     "Jose": 25,
     "David": 31,
     "Alexis": 35,
@@ -14,7 +14,8 @@ edades = {
 }
 
 # Solicitar nombre al usuario
-nombre_usuario = input("Ingresa un nombre: ")
+# Agregamos .capitalize() para estandarizar la entrada y evitar problemas con mayúsculas/minúsculas
+nombre_usuario = input("Ingresa un nombre: ").capitalize()
 
 # Verificar si el nombre existe en el diccionario
 if nombre_usuario in edades:
