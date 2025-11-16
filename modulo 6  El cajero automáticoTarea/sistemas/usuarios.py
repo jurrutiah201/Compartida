@@ -16,13 +16,11 @@ usuarios = {
         "saldo": 1744.0,
         "historial": []
     },
-
     "3658": {
         "nombre": "Rances",
         "saldo": 2023.0,
         "historial": []
     },
-
     "9635": {
         "nombre": "Alexis",
         "saldo": 1845.0,
