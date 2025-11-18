@@ -1,26 +1,32 @@
 from juegos.Dificultad import seleccionar_dificultad
-from juegos.utilidad import mensaje_perder, mostrar_mayor, mostrar_menor
-from juegos.generar_numero import random as generar_numero
-from juegos import controlar_intentos
-from juegos import pregunta_continuar
-from juegos import bienvenida, despedida
+from juegos.generar_numero import generar_numero
+from juegos.controlar_intentos import controlar_intentos
+from juegos import bienvenida, despedida, pregunta_continuar
 
 
 def main():
     bienvenida()
-    
+
     jugar = True
-    
     while jugar:
-        nivel_dificultad = seleccionar_dificultad()
-        numero_secreto = generar_numero(nivel_dificultad)
-        
-        print("\n***** Intenta adivinar el numero secreto *****")
-        print(f"\nEl numero esta entre 1 y {nivel_dificultad}")
-        print("Tienes 5 intentos, !Buena suerte!\n")
-        
-        controlar_intentos(numero_secreto,nivel_dificultad)
-        
-        jugar = pregunta_continuar
-        
+        # 1. Elegir dificultad (1-10, 1-20, 1-50)
+        limite_superior = seleccionar_dificultad()
+
+        # 2. Generar número secreto según dificultad
+        numero_secreto = generar_numero(limite_superior)
+
+        print("\n***** Intenta adivinar el número secreto *****")
+        print(f"El número está entre 1 y {limite_superior}")
+        print("Tienes 5 intentos, ¡buena suerte!\n")
+
+        # 3. Manejar los intentos del jugador
+        controlar_intentos(numero_secreto)
+
+        # 4. Preguntar si quiere jugar otra vez
+        jugar = pregunta_continuar()
+
     despedida()
+
+
+if __name__ == "__main__":
+    main()
