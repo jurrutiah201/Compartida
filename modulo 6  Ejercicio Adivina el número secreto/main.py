@@ -21,6 +21,6 @@ def main():
         
         controlar_intentos(numero_secreto,nivel_dificultad)
         
-        jugar = pregunta_continuar
+        jugar = pregunta_continuar()
         
     despedida()
