@@ -2,17 +2,18 @@ from sistemas.Login import iniciar_sesion
 
 
 def mostrar_menu(nombre):
-    print(f"\n--- MENÚ DEL CAJERO ({nombre}) ---")
-    print("1. Consultar saldo")
-    print("2. Depositar dinero")
-    print("3. Retirar dinero")
-    print("4. Ver historial de movimientos")
-    print("5. Salir")
+    print("╠════════════════════════════════╣")
+    print("║ 1. 🔍 Consultar saldo          ║")
+    print("║ 2. 💵 Depositar dinero         ║")
+    print("║ 3. 💸 Retirar dinero           ║")
+    print("║ 4. 📜 Ver historial            ║")
+    print("║ 5. 🚪 Cerrar sesión            ║")
+    print("╚════════════════════════════════╝")
 
 
 def pedir_opcion():
     while True:
-        opcion = input("Selecciona una opción: ").strip()
+        oopcion = input("👉 Selecciona una opción: ").strip()
         if opcion in ("1", "2", "3", "4", "5"):
             return opcion
         print("❌ Opción inválida. Elige 1, 2, 3, 4 o 5.")
@@ -24,11 +25,13 @@ def pedir_monto(mensaje):
         try:
             monto = float(entrada)
             if monto <= 0:
-                print("❌ El monto debe ser mayor que 0.")
+                print("❌ El monto debe ser positivo.")
+            elif monto > 10000: # Límite de seguridad opcional
+                print("❌ Por seguridad, no aceptamos montos mayores a $10,000 en una operación.")
             else:
                 return monto
         except ValueError:
-            print("❌ Ingresa un número válido (ejemplo: 1500 o 1500.50).")
+            print("❌ Formato incorrecto. Usa números (ej: 50.00).")
 
 
 def mostrar_historial(usuario_data):
