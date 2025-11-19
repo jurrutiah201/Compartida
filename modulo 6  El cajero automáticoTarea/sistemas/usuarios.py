@@ -26,5 +26,4 @@ usuarios = {
         "saldo": 1845.0,
         "historial": []
     }
-
 }
