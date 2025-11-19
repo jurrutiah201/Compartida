@@ -1,4 +1,4 @@
-from .utilidad import mostrar_mayor, mostrar_menor, mensaje_perder
+from juegos.utilidad import mostrar_mayor, mostrar_menor, mensaje_perder
 
 def controlar_intentos(numero_secreto: int, intentos_maximos: int = 5) -> bool:
     """

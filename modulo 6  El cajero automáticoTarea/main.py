@@ -13,11 +13,10 @@ def mostrar_menu(nombre):
 
 def pedir_opcion():
     while True:
-        oopcion = input("👉 Selecciona una opción: ").strip()
+        opcion = input("👉 Selecciona una opción: ").strip()
         if opcion in ("1", "2", "3", "4", "5"):
             return opcion
         print("❌ Opción inválida. Elige 1, 2, 3, 4 o 5.")
-
 
 def pedir_monto(mensaje):
     while True:

@@ -1,12 +1,12 @@
 from juegos.Dificultad import seleccionar_dificultad
 from juegos.generar_numero import generar_numero
 from juegos.controlar_intentos import controlar_intentos
-from juegos import bienvenida, despedida, pregunta_continuar
+from juegos.Saludos import bienvenida, despedida, pregunta_continuar
 
 
 def main():
+    
     bienvenida()
-
     jugar = True
     while jugar:
         # 1. Elegir dificultad (1-10, 1-20, 1-50)
@@ -26,7 +26,6 @@ def main():
         jugar = pregunta_continuar()
 
     despedida()
-
 
 if __name__ == "__main__":
     main()
