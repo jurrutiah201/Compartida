@@ -1,6 +1,7 @@
 import flet as ft
 from vistas.libros_view import crear_vista_libros
 from vistas.clientes_view import crear_vista_clientes
+from vistas.prestamos_view import crear_vista_prestamos
 
 
 def main(page: ft.Page):
@@ -8,35 +9,32 @@ def main(page: ft.Page):
     page.horizontal_alignment = "center"
     page.vertical_alignment = "start"
 
-    # Aquí se mostrará la vista seleccionada (Libros / Clientes)
     contenido = ft.Column(expand=True)
 
-    # Cambiar entre pestañas
     def cambiar_vista(e):
-        seleccion = e.control.selected_index
         contenido.controls.clear()
 
-        if seleccion == 0:           # Pestaña Libros
+        if e.control.selected_index == 0:
             contenido.controls.append(crear_vista_libros(page))
-        elif seleccion == 1:         # Pestaña Clientes
+        elif e.control.selected_index == 1:
             contenido.controls.append(crear_vista_clientes(page))
+        elif e.control.selected_index == 2:
+            contenido.controls.append(crear_vista_prestamos(page))
 
         page.update()
 
-    # Pestañas de la app
     tabs = ft.Tabs(
         selected_index=0,
         tabs=[
             ft.Tab(text="Libros"),
             ft.Tab(text="Clientes"),
+            ft.Tab(text="Préstamos"),
         ],
         on_change=cambiar_vista,
     )
 
-    # Vista inicial (Libros)
     contenido.controls.append(crear_vista_libros(page))
 
-    # Layout principal
     page.add(
         ft.Column(
             controls=[

@@ -1,10 +1,13 @@
 import flet as ft
-from data.clientes_data import lista_clientes
 from modelos.cliente import Cliente
+from data.persistence import cargar_clientes, guardar_clientes
 
 
 def crear_vista_clientes(page: ft.Page) -> ft.Container:
     """Vista para la gestión de clientes."""
+
+    # 🔹 Cargar clientes guardados
+    lista_clientes = cargar_clientes()
 
     nombre_input = ft.TextField(label="Nombre", width=250)
     apellido_input = ft.TextField(label="Apellido", width=250)
@@ -12,7 +15,7 @@ def crear_vista_clientes(page: ft.Page) -> ft.Container:
 
     lista_visual = ft.Column()
 
-    # --- Función para actualizar la lista en pantalla ---
+    # --- Actualizar lista en pantalla ---
     def actualizar_lista():
         lista_visual.controls.clear()
         for cli in lista_clientes:
@@ -23,7 +26,7 @@ def crear_vista_clientes(page: ft.Page) -> ft.Container:
 
     actualizar_lista()
 
-    # --- Función para agregar cliente ---
+    # --- Agregar cliente ---
     def agregar_cliente(e):
         if not nombre_input.value or not apellido_input.value or not cedula_input.value:
             page.snack_bar = ft.SnackBar(ft.Text("Todos los campos son obligatorios"))
@@ -31,10 +34,12 @@ def crear_vista_clientes(page: ft.Page) -> ft.Container:
             page.update()
             return
 
-        # Validar si la cédula ya existe
+        # Validar cédula repetida
         for cli in lista_clientes:
             if cli.cedula == cedula_input.value:
-                page.snack_bar = ft.SnackBar(ft.Text("Ya existe un cliente con esa cédula"))
+                page.snack_bar = ft.SnackBar(
+                    ft.Text("Ya existe un cliente con esa cédula")
+                )
                 page.snack_bar.open = True
                 page.update()
                 return
@@ -47,7 +52,9 @@ def crear_vista_clientes(page: ft.Page) -> ft.Container:
 
         lista_clientes.append(nuevo_cliente)
 
-        # Limpiar campos
+        # 💾 Guardar en archivo
+        guardar_clientes(lista_clientes)
+
         nombre_input.value = ""
         apellido_input.value = ""
         cedula_input.value = ""
