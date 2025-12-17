@@ -4,6 +4,6 @@ from modelos.cliente import Cliente
 
 lista_clientes = [
     Cliente("Rances", "Hernandez", "8-982-450"),
-    # Aquí los demás compañeros van a agregar sus propios datos:
+    Cliente("Michael", "Zhang", "4-812-1783"),
     Cliente(nombre="Nombre", apellido="Apellido", cedula="X-XXX-XXXX"),
 ]
