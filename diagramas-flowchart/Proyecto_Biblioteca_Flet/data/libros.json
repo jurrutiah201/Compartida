@@ -1,0 +1,26 @@
+[
+    {
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "isbn": "978-0451524935",
+        "estado": "Disponible",
+        "prestado_a": null,
+        "categoria": null
+    },
+    {
+        "titulo": "Don Quijote de la Mancha",
+        "autor": "Miguel de Cervantes",
+        "isbn": "978-8420412146",
+        "estado": "Disponible",
+        "prestado_a": null,
+        "categoria": null
+    },
+    {
+        "titulo": "Harry Potter y la piedra filosofal",
+        "autor": "J.K. Rowling",
+        "isbn": "978-8478884452",
+        "estado": "Disponible",
+        "prestado_a": null,
+        "categoria": null
+    }
+]

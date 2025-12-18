@@ -3,5 +3,10 @@
         "nombre": "michael",
         "apellido": "zhang",
         "cedula": "4-812-1783"
+    },
+    {
+        "nombre": "David",
+        "apellido": "Acevedo",
+        "cedula": "8-881-2237"
     }
 ]
